@@ -1,0 +1,22 @@
+.firstrow, .secondrow, .thirdrow, .fourthrow{
+    width: 300px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 27px 27px 27px 27px;
+    column-gap: 30px;
+    margin-bottom: 10px;
+}
+
+.numbers {
+    background-color: rgb(206, 206, 221);
+    border-style: none;
+    font-family: sans-serif;
+    border-radius: 50px;
+    padding: 3px 20px;
+}
+
+.numbers:hover {
+    background-color: rgb(194, 194, 231); ;
+}
+

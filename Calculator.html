@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "header.css">
+        <title>
+            CALCULATOR
+        </title>
+    </head>
+
+    <body>
+        <div class = "firstrow">
+            <div class = "container"> 
+                <button class ="numbers" 
+                    onclick = "
+                    calculation += '7';
+                    console.log(calculation)">7
+                </button>
+            </div>
+
+            <div class = "container">
+                <button class ="numbers" 
+                    onclick = "
+                    calculation += '8';
+                    console.log(calculation)">8
+                    
+                </button>
+            </div>
+
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += '9';
+                    console.log(calculation)">9</button>
+            </div>
+
+            <div class = "container"> <!--addition-->
+                <button class ="numbers"
+                    onclick = "
+                    calculation += ' + ';
+                    console.log(calculation)">&#43;</button>
+            </div>
+
+        </div>
+
+        <div class = "secondrow">
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += '4';
+                    console.log(calculation)">4</button>
+            </div>
+
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += '5';
+                    console.log(calculation)">5</button>
+
+            </div>
+
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += '6';
+                    console.log(calculation)">6</button>
+            </div>
+
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += ' - ';
+                    console.log(calculation)">&minus;</button>
+            </div>
+        </div>
+
+        <div class = "thirdrow">
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += '1';
+                    console.log(calculation)">1</button>
+            </div>
+
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += '2';
+                    console.log(calculation)"
+                    >2</button>
+            </div>
+
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += '3';
+                    console.log(calculation)">3</button>
+            </div>
+
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += ' * ';
+                    console.log(calculation)">&times;</button>
+            </div>
+            
+        </div>
+
+        <div class = "fourthrow">
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation = '';
+                    console.log('Calculator Reset Done.')">C</button>
+            </div>
+
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += ' 0 ';
+                    console.log(calculation)">0</button>
+            </div>
+
+            <div class = "container">
+                <button class = "numbers"
+                    onclick = "
+                    calculation = eval(calculation);
+                    console.log(calculation)">=</button>
+            </div>
+
+            <div class = "container">
+                <button class ="numbers"
+                    onclick = "
+                    calculation += ' / ';
+                    console.log(calculation)">&divide;</button>
+            </div>
+        </div>
+
+        <script>
+
+            let calculation = '';
+
+        </script>
+    </body>
+</html>
