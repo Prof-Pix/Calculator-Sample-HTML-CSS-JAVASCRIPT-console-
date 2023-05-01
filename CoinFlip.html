@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Heads and Tails
+        </title>
+    </head>
+
+    <body>
+        <p>Heads and Tails</p>
+        <button onclick = "
+            computerMove = playGame();
+            result('head', computerMove);
+
+        ">Heads</button>
+        <button onclick = "
+
+            computerMove = playGame();
+            result('tail', computerMove);
+            
+        ">Tails</button>
+
+        <button onclick = "
+        stats.wins = 0;
+        stats.losses = 0;
+        localStorage.removeItem('stats');
+        ">Reset Score</button>
+
+        <script>
+            const stats = JSON.parse(localStorage.getItem('stats')) || {
+                wins: 0,
+                losses: 0
+            }
+
+
+
+            let computerMove;
+            function playGame() {
+                let headTail = Math.random();
+                let computerMove;
+
+                    if (headTail < 0.51) {
+                        computerMove = 'head';
+                    }
+                    else if (headTail > 0.50) {
+                        computerMove = 'tail';
+                    }
+
+                   return computerMove;   
+            }
+
+            function result(userMove, computerMove) {
+                if (userMove === computerMove) {
+                    stats.wins += 1;
+                    alert(`Your guess is ${userMove}. The coin shows ${computerMove}. You win.
+Win: ${stats.wins}, Losses: ${stats.losses}`);
+                }
+                else if (userMove != computerMove) {
+                    stats.losses += 1;
+                    alert(`Your guess is ${userMove}. The coin shows ${computerMove}. You lose.
+Win: ${stats.wins}, Losses: ${stats.losses}`);
+                }
+                localStorage.setItem('stats', JSON.stringify(stats));
+            }
+
+        </script>
+    </body>
+</html>
